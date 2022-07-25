@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    padding: 0 15%;
+}
+
+header {
+    border: solid 1px #eee;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+header h2 {
+    font-weight: 700;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content {
+    width: 75%;  
+}
+
+main .search {
+    border: solid 1px #eee;
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+main .search input[type="submit"] {
+    height: 39px;
+    width: 100px;
+    border-radius: 4px 0 0 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+main .search input[type="submit"]:hover {
+    background-color: blue;
+    color: white;
+}
+
+main .search input[type=text] {
+    height: 38px;
+    padding: 0 5px;
+    width: 80%;
+    font-weight: 400;
+}
+
+main .search input[type=reset] {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+    display: none;
+}
+
+main progress {
+    width: 100%;
+    height: 20px;
+    border: solid 1px #eee;
+    border-radius: 5px;
+
+}
+
+article header {
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+
+main aside {
+    width: 24%;
+}
+
+main aside ul {
+    list-style: none;
+    border: solid 1px #eee;
+    border-radius: 5px;
+    text-align: left;
+}
+
+main aside ul li {
+    padding: 10px 0;
+    cursor: pointer;
+    border: solid 1px #eee;
+    padding-left: 30px;
+}
+
+main aside ul li.active {
+    background-color: blue;
+    color: white
+}
+
+main aside ul li:hover{
+    background-color: blue;
+    color: white
+}
+
+main aside ul li:first-child {
+    border-radius: 4px 4px 0 0;
+}
+
+main aside ul li:last-child {
+    border-radius: 0 0 4px 4px;
+}

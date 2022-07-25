@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WordPress Developer - FetchApi no WP</title>
+    <link rel="stylesheet" href="theme.css">
 </head>
 <body>
     <header>
@@ -12,31 +13,34 @@
         <h2>FetchAPi sem segredos</h2>
     </header>
 
-    <section>
+    <main>
+
         <div class="content">
             <div class="search">
                 <input type="submit" value="Buscar">
                 <input type="text" name="search" id="search" placeholder="O que você procura?">
+                <input type="reset" value="Limpar">
             </div>
-        </div>
+            <progress></progress>
+            <article>
+                <header>
+                    <h2>Title Post</h2>
+                </header>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores doloremque magni commodi, error quis, blanditiis ducimus delectus cupiditate, doloribus alias voluptatum obcaecati! Ipsum odit nulla quam laborum vel impedit placeat?</p>
+                <footer>
+                    <mark>PHP</mark>
+                    <button id="more">Leia mais</button>
+                    <button id="like">Curtir <mark>1</mark></button>
+                </footer>
+            </article>
 
-        <progress></progress>
-        <article>
-            <header>
-                <h2>Title Post</h2>
-            </header>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores doloremque magni commodi, error quis, blanditiis ducimus delectus cupiditate, doloribus alias voluptatum obcaecati! Ipsum odit nulla quam laborum vel impedit placeat?</p>
-            <footer>
-                <mark>PHP</mark>
-                <button id="more">Leia mais</button>
-                <button id="like">Curtir <mark>1</mark></button>
-            </footer>
-        </article>
-        <mark>Nenhum post encontrado</mark>
-        
+            
+            <mark>Nenhum post encontrado</mark>
+        </div>
+    
         <aside>
             <ul>
-                <li>Todos</li>
+                <li class="active">Todos</li>
                 <li>PHP</li>
                 <li>JavaScript</li>
                 <li>Python</li>
@@ -45,7 +49,7 @@
                 <li>Banco de Dados</li>
             </ul>
         </aside>
-    </section>
+    </main>
 
     <nav>
         <a href="" class="active">1</a>
