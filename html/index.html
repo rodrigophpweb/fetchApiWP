@@ -21,21 +21,21 @@
                 <input type="text" name="search" id="search" placeholder="O que você procura?">
                 <input type="reset" value="Limpar">
             </div>
-            <progress></progress>
+            <progress id="file" value="32" max="100"> 32% </progress>
             <article>
                 <header>
                     <h2>Title Post</h2>
                 </header>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores doloremque magni commodi, error quis, blanditiis ducimus delectus cupiditate, doloribus alias voluptatum obcaecati! Ipsum odit nulla quam laborum vel impedit placeat?</p>
                 <footer>
-                    <mark>PHP</mark>
-                    <button id="more">Leia mais</button>
-                    <button id="like">Curtir <mark>1</mark></button>
+                    <mark class="badge-category">PHP</mark>
+                    <div class="button">
+                        <button id="more" class="btn-more">Leia mais</button>
+                        <button id="like" class="btn-like">Curtir <mark>1</mark></button>
+                    </div>
                 </footer>
-            </article>
-
-            
-            <mark>Nenhum post encontrado</mark>
+            </article>            
+            <mark class="alert-info">Nenhum post encontrado</mark>
         </div>
     
         <aside>
@@ -51,12 +51,14 @@
         </aside>
     </main>
 
-    <nav>
-        <a href="" class="active">1</a>
-        <a href="" class="active">2</a>
-        <a href="" class="active">3</a>
-        <a href="" class="active">4</a>
-        <a href="" class="active">5</a>
+    <nav class="pagination">
+        <ul>
+            <li class="active"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+        </ul>
     </nav>
 
     <dialog>

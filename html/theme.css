@@ -8,12 +8,20 @@
     font-family: 'Lato', sans-serif;
 }
 
+:root {
+    --php: #4f5b93;
+    --white: #fff;
+    --blue: #0000ff;
+    --border-gray: #dddddd;
+  }
+  
+
 body {
     padding: 0 15%;
 }
 
 header {
-    border: solid 1px #eee;
+    border: solid 1px var(--border-gray);
     border-radius: 5px;
     padding: 20px;
     text-align: center;
@@ -42,14 +50,13 @@ main .content {
 }
 
 main .search {
-    border: solid 1px #eee;
+    border: solid 1px var(--border-gray);
     border-radius: 5px;
     height: 40px;
-    margin-bottom: 30px;
 }
 
 main .search input[type="submit"] {
-    height: 39px;
+    height: 38px;
     width: 100px;
     border-radius: 4px 0 0 4px;
     font-weight: 700;
@@ -57,7 +64,7 @@ main .search input[type="submit"] {
 }
 
 main .search input[type="submit"]:hover {
-    background-color: blue;
+    background-color: var(--blue);
     color: white;
 }
 
@@ -73,7 +80,7 @@ main .search input[type=reset] {
     width: 80px;
     border-radius: 5px;
     color: white;
-    background-color: tomato;
+    background-color: var(--blue);
     cursor: pointer;
     display: none;
 }
@@ -81,17 +88,95 @@ main .search input[type=reset] {
 main progress {
     width: 100%;
     height: 20px;
-    border: solid 1px #eee;
+    margin: 20px 0;
+    border: solid 1px var(--border-gray);
     border-radius: 5px;
 
 }
 
-article header {
+main .content article {
+    border: solid 1px var(--border-gray);
+    border-radius: 5px;
+}
+
+.content article header {
     border: none;
     padding: 0;
     text-align: left;
+    margin: 0;
 }
 
+.content article header h2 {
+    padding: 20px;
+    font-weight: 900;
+}
+
+.content article p {
+    padding: 20px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.content article footer {
+    border-top: solid 1px var(--border-gray);
+    padding: 20px;
+    background-color: var(--border-gray);
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.content article footer .badge-category {
+    background-color: var(--php);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.content article footer button {
+    cursor: pointer;
+}
+
+.content article footer .btn-more {
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+    color: var(--white);
+    background-color: deepskyblue;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.content article footer .btn-like {
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+    color: var(--white);
+    font-weight: 400;
+    margin-right: 10px;
+    background-color: darkseagreen;
+}
+
+.content article footer .btn-like mark {
+    margin-left: 5px;
+    background-color: var(--white);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.content .alert-info {
+    background-color: #fffebf;
+    padding: 20px;
+    border: solid 1px #edecb2;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    margin:  20px 0;
+}
 
 main aside {
     width: 24%;
@@ -99,7 +184,7 @@ main aside {
 
 main aside ul {
     list-style: none;
-    border: solid 1px #eee;
+    border: solid 1px var(--border-gray);
     border-radius: 5px;
     text-align: left;
 }
@@ -107,17 +192,17 @@ main aside ul {
 main aside ul li {
     padding: 10px 0;
     cursor: pointer;
-    border: solid 1px #eee;
+    border-bottom: solid 1px #ddd;
     padding-left: 30px;
 }
 
 main aside ul li.active {
-    background-color: blue;
+    background-color: var(--blue);
     color: white
 }
 
 main aside ul li:hover{
-    background-color: blue;
+    background-color: var(--blue);
     color: white
 }
 
@@ -127,4 +212,61 @@ main aside ul li:first-child {
 
 main aside ul li:last-child {
     border-radius: 0 0 4px 4px;
+    border-bottom: none;
+}
+
+/* Pagination */
+.pagination {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pagination ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    width: max-content;
+}
+
+.pagination ul li {
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+    padding: 10px 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.pagination ul li:first-child {
+    border-radius: 5px 0 0 5px;
+    border-left: solid 1px #ddd;
+}
+
+.pagination ul li:last-child {
+    border-radius: 0 5px 5px 0;
+    border-right: solid 1px #ddd;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.pagination li.active,
+.pagination li:hover {
+    background-color: var(--blue);
+    font-weight: 700;
+}
+
+.pagination ul li.active a,
+.pagination ul li:hover a {
+    color: white;
+}
+
+.pagination ul li:first-child {
+    border-right: none;
 }
